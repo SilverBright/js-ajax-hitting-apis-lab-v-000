@@ -15,3 +15,4 @@ function getCommits(el){
   req.open('GET', 'https://api.github.com/repos/'+ owner +'/'+repo+'/commits');
   req.send();
 }
+
