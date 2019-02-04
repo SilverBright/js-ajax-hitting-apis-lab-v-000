@@ -45,3 +45,10 @@ function displayCommits(){
   .join('')}</ul>`;
   document.getElementById('details').innerHTML = commitsList
 }
+
+function displayBranches(){
+  const branches = JSON.parse(this.responseText);
+  const branchesList = `<ul>${branches.map(branch => '<li>'+branch.name+ </li>')
+    .join('')}</ul>`;
+    document.getElementById('details').innerHTML = branchesList     
+}
