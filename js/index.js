@@ -26,13 +26,11 @@ function getBranches(el){
     req.send();
 }
 
+
 function displayRepositories(){
-  //tell the interpreter its working with JSON by
-    const repos = JSON.parse(this.responseText);
-    //set to the XHW object that fired the event
-    console.log(repos)
-    //very important before <ul> below that is not an apostraphe ('), it is this (`) which is shift ~
-    const repoList = `<ul>${repos.map(
+  const repos = JSON.parse(this.responseText);
+  console.log(repos)
+  const repoList = `<ul>${repos.map(
                                       r =>
                                           '<li>' +
                                           //add repo name
