@@ -8,10 +8,10 @@ function getRepositories() {
 }
 
 function getCommits(el){
-    const owner = el.dataset.username;
-    const repo = el.dataset.repository;
-    const req = new XMLHttpRequest();
-    req.addEventListener('load', displayCommits);
-    req.open('GET', 'https://api.github.com/repos/'+ owner +'/'+repo+'/commits');
-    req.send();
+  const owner = el.dataset.username;
+  const repo = el.dataset.repository;
+  const req = new XMLHttpRequest();
+  req.addEventListener('load', displayCommits);
+  req.open('GET', 'https://api.github.com/repos/'+ owner +'/'+repo+'/commits');
+  req.send();
 }
