@@ -16,3 +16,11 @@ function getCommits(el){
   req.send();
 }
 
+function getBranches(el){
+  const owner = el.dataset.username;
+  const repo = el.dataset.repository;
+  const req = new XMLHttpRequest();
+  req.addEventListener('load', displayBranches);
+  req.open('GET', 'https://api.github.com/repos/'+ owner +'/'+repo+'/branches');
+  req.send();
+}
