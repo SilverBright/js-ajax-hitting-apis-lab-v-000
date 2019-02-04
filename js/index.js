@@ -1,10 +1,8 @@
 // your code here
 
 function getRepositories(){
-    //take the username input from html form
-    const username = document.getElementById('username').value;
-    //setup XHR get request to api
-    const req = new XMLHttpRequest();
+  const username = document.getElementById('username').value;
+  const req = new XMLHttpRequest();
     //listen for a loading of the xhr request then execute show function
     req.addEventListener('load', displayRepositories);
 
