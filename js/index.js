@@ -3,11 +3,9 @@
 function getRepositories(){
   const username = document.getElementById('username').value;
   const req = new XMLHttpRequest();
-    //listen for a loading of the xhr request then execute show function
-    req.addEventListener('load', displayRepositories);
-
-    req.open('GET', 'https://api.github.com/users/'+ username +'/repos');
-    req.send();
+  req.addEventListener('load', displayRepositories);
+  req.open('GET', 'https://api.github.com/users/'+ username +'/repos');
+  req.send();
 }
 
 function getCommits(el){
